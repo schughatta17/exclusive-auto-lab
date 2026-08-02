@@ -275,6 +275,39 @@ footer .flinks a:hover{color:var(--accent)}
   .crumbs .wrap{padding:12px 0;font-size:10px!important}
 }
 
+
+/* === RESTORED MOBILE HEADER + HAMBURGER NAVIGATION === */
+.mobile-menu-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,.35);width:46px;height:46px;border-radius:50%;padding:0;align-items:center;justify-content:center;cursor:pointer;color:#fff;flex:0 0 46px}
+.mobile-menu-toggle span{display:block;width:20px;height:2px;background:currentColor;margin:4px auto;transition:transform .22s ease,opacity .22s ease}
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mobile-menu{display:none}
+@media(max-width:900px){
+  header .nav{height:92px!important;gap:14px!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+  header .brand{width:min(330px,calc(100% - 62px))!important;max-width:none!important;flex:1 1 auto!important;overflow:visible!important}
+  header .brand img{display:block!important;width:100%!important;height:auto!important;max-height:68px!important;object-fit:contain!important;object-position:left center!important}
+  header nav{display:none!important}
+  .mobile-menu-toggle{display:inline-flex!important;flex-direction:column!important}
+  .mobile-menu{display:block;position:fixed;z-index:99;top:var(--mobile-menu-top,0);left:0;right:0;background:#070707;border-top:1px solid #242424;border-bottom:1px solid #242424;max-height:0;overflow:auto;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .22s ease,visibility .22s ease;box-shadow:0 24px 50px rgba(0,0,0,.6)}
+  .mobile-menu.open{max-height:calc(100vh - var(--mobile-menu-top,0px) - 58px);opacity:1;visibility:visible}
+  .mobile-menu-inner{width:min(calc(100% - 28px),var(--max));margin:auto;padding:12px 0 24px}
+  .mobile-menu a,.mobile-menu summary{display:flex;align-items:center;justify-content:space-between;width:100%;padding:17px 4px;border-bottom:1px solid #222;font-size:14px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;list-style:none;color:#fff}
+  .mobile-menu summary::-webkit-details-marker{display:none}
+  .mobile-menu summary:after{content:'+';color:var(--accent);font-size:22px;line-height:1}
+  .mobile-menu details[open] summary:after{content:'−'}
+  .mobile-submenu{padding:0 0 5px 14px;background:#0b0b0b}
+  .mobile-submenu a{padding:13px 4px;color:#bbb;font-size:12px;border-bottom:1px solid #1d1d1d}
+  .mobile-menu .mobile-call{margin-top:18px;justify-content:center;background:var(--accent);color:#000;border:0;border-radius:3px}
+  body.menu-open{overflow:hidden}
+}
+@media(max-width:560px){
+  header .nav{height:88px!important}
+  header .brand{width:min(300px,calc(100% - 58px))!important}
+  header .brand img{max-height:64px!important}
+  .mobile-menu-toggle{width:44px;height:44px;flex-basis:44px}
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":["AutoBodyShop","AutomotiveBusiness"],"name":"Legends Auto Body","telephone":"+1-203-308-7381","address":{"@type":"PostalAddress","streetAddress":"150 Universal Drive","addressLocality":"North Haven","addressRegion":"CT","postalCode":"06473","addressCountry":"US"},"areaServed":["North Haven CT","New Haven CT","Hamden CT","Wallingford CT","Cheshire CT","Branford CT","East Haven CT","West Haven CT","Meriden CT"],"url":"https://legendsautobodyct.com/","description":"Collision repair and auto customization shop offering partial-front, full-front and full-body paint protection film (PPF), stealth PPF, ceramic coating, regular and ceramic window tint, vinyl wraps, chrome deletes, lighting tint, paint correction and custom builds.","hasOfferCatalog":{"@type":"OfferCatalog","name":"Automotive Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Collision Repair"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Paint Protection Film (PPF) Packages"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Body Stealth PPF"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Ceramic Coating"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Regular and Ceramic Window Tint"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Headlight Tint"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Taillight Tint"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Vinyl Wraps"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Chrome Delete"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Paint Correction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Custom Builds"}}]}}</script>
 <meta content="index,follow,max-image-preview:large" name="robots"/><meta content="PPF near me, paint protection film North Haven CT, stealth PPF Connecticut, ceramic coating near me, window tint North Haven CT, vinyl wraps CT, chrome delete, paint correction, auto customization North Haven, custom car shop Connecticut" name="keywords"/><meta content="Schedule Auto Body Service | Legends Auto Body North Haven, CT" property="og:title"/><meta content="Request an appointment with Legends Auto Body in North Haven, CT. Choose a preferred date and time, describe your vehicle needs and upload damage photos." property="og:description"/><meta content="website" property="og:type"/><meta content="https://legendsautobodyct.com/schedule.html" property="og:url"/><link href="https://legendsautobodyct.com/schedule.html" rel="canonical"/>
@@ -291,7 +324,30 @@ footer .flinks a:hover{color:var(--accent)}
 <svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="5" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.7" fill="currentColor" r="1.1"></circle></svg>
 </a>
 <a class="navcta" href="tel:+12033087381">Call the Shop</a>
-</nav><button class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNavPanel"><span></span></button></div><div class="mobile-nav-panel" id="mobileNavPanel"><a href="index.html">Home</a><a href="collision-repair.html">Collision Repair</a><a href="insurance-claims.html">Insurance Claims</a><a href="paint-protection-film.html">Paint Protection Film</a><a href="ceramic-coating.html">Ceramic Coating</a><a href="vehicle-tint.html">Vehicle Tint</a><a href="vinyl-wraps.html">Vinyl Wraps</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a><a href="tel:+12033087381">Call 203-308-7381</a></div></header>
+</nav><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false"><span></span><span></span><span></span></button><button class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNavPanel"><span></span></button></div><div class="mobile-nav-panel" id="mobileNavPanel"><a href="index.html">Home</a><a href="collision-repair.html">Collision Repair</a><a href="insurance-claims.html">Insurance Claims</a><a href="paint-protection-film.html">Paint Protection Film</a><a href="ceramic-coating.html">Ceramic Coating</a><a href="vehicle-tint.html">Vehicle Tint</a><a href="vinyl-wraps.html">Vinyl Wraps</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a><a href="tel:+12033087381">Call 203-308-7381</a></div></header><div class="mobile-menu" id="mobile-navigation" aria-hidden="true">
+<div class="mobile-menu-inner">
+<a href="index.html">Home</a>
+<details><summary>Collision Repair</summary><div class="mobile-submenu">
+<a href="collision-repair.html">Collision Repair</a>
+<a href="dent-repair.html">Dent Repair &amp; PDR</a>
+<a href="auto-body-paint.html">Paint &amp; Refinishing</a>
+<a href="insurance-claims.html">Insurance Claims</a>
+</div></details>
+<details><summary>Customization</summary><div class="mobile-submenu">
+<a href="paint-protection-film.html">Paint Protection Film</a>
+<a href="ceramic-coating.html">Ceramic Coating</a>
+<a href="vehicle-tint.html">Vehicle Tint</a>
+<a href="vinyl-wraps.html">Vinyl Wraps</a>
+<a href="chrome-delete.html">Chrome Delete</a>
+<a href="paint-correction.html">Paint Correction</a>
+<a href="wheels-calipers.html">Wheels &amp; Calipers</a>
+<a href="custom-builds.html">Custom Builds</a>
+</div></details>
+<a href="schedule.html">Schedule</a>
+<a href="contact.html">Contact</a>
+<a href="https://www.instagram.com/legendsautobodyct/" target="_blank" rel="noopener">Instagram</a>
+<a class="mobile-call" href="tel:+12033087381">Call 203-308-7381</a>
+</div></div>
 <div class="crumbs"><div class="wrap"><a href="index.html">Home</a><span>›</span>Schedule</div></div>
 <section class="page-intro"><div class="wrap"><div class="eyebrow">Appointment request</div><h1>Schedule your visit.</h1><p>Send us the basic details about your vehicle and the work you need. We will review your request and contact you to confirm the appointment time.</p></div></section>
 <section class="appointment" id="appointment"><div class="wrap appointment-grid"><div class="appointment-copy"><div class="eyebrow" style="color:#4d5d00">Before you arrive</div><h2>Help us prepare for your vehicle.</h2><p>Choose a preferred day and time, explain what happened and upload clear photos when possible.</p><div class="appointment-points"><div class="appointment-point">Upload up to 8 damage photos</div><div class="appointment-point">Add claim, towing or repair notes</div><div class="appointment-point">Request the day and time that works for you</div></div><div class="schedule-direct"><strong>Need immediate help?</strong><a href="tel:+12033087381">Call 203-308-7381</a><a href="sms:+12033087381">Text the Shop</a></div></div><form action="https://hook.us2.make.com/7bvadcl0fblqgu49mbp9f2fg27564av3" class="appointment-form" enctype="multipart/form-data" id="appointmentForm" method="post"><div class="form-grid"><div class="field"><label for="appt-name">Full name</label><input autocomplete="name" id="appt-name" name="name" placeholder="Your name" required="" type="text"/></div><div class="field"><label for="appt-phone">Phone number</label><input autocomplete="tel" id="appt-phone" name="phone" placeholder="(203) 555-0123" required="" type="tel"/></div><div class="field"><label for="appt-email">Email</label><input autocomplete="email" id="appt-email" name="email" placeholder="you@email.com" type="email"/></div><div class="field"><label for="appt-contact">Best way to reach you</label><select id="appt-contact" name="preferred_contact"><option>Phone call</option><option>Text message</option><option>Email</option></select></div><div class="field"><label for="appt-vehicle">Vehicle</label><input id="appt-vehicle" name="vehicle" placeholder="Year, make and model" required="" type="text"/></div><div class="field"><label for="appt-service">What do you need?</label><select id="appt-service" name="service"><option>Collision damage inspection</option><option>Dent or bumper repair</option><option>Paint and refinishing</option><option>Insurance claim assistance</option><option>Paint protection film (PPF)</option><option>Ceramic coating</option><option>Vehicle tint</option><option>Vinyl wrap</option><option>Customization or modification</option><option>Other</option></select></div><div class="field"><label for="appt-date">Preferred date</label><input id="appt-date" name="preferred_date" required="" type="date"/></div><div class="field"><label for="appt-time">Preferred time</label><select id="appt-time" name="preferred_time" required=""><option value="">Choose a time</option><option>Morning — 8:00 AM to 11:00 AM</option><option>Midday — 11:00 AM to 2:00 PM</option><option>Afternoon — 2:00 PM to 5:00 PM</option></select></div><div class="field full"><label for="appt-notes">Vehicle and appointment notes</label><textarea id="appt-notes" name="notes" placeholder="Tell us what happened, where the damage is located, whether the vehicle is drivable, insurance claim details, towing needs or anything else we should know."></textarea></div><div class="field full"><label for="appt-photos">Photos of the vehicle or damage</label><label class="upload-box" for="appt-photos"><strong>Choose photos to upload</strong><span>Upload up to 8 JPG, PNG, HEIC or WEBP images</span><input accept="image/jpeg,image/png,image/heic,image/heif,image/webp" id="appt-photos" multiple="" name="photos" type="file"/><div class="file-list" id="fileList"></div></label></div><div class="field full"><button class="btn submit" type="submit">Request Appointment</button><p class="form-note">Submitting this form requests an appointment. Your time is not confirmed until Legends Auto Body contacts you.</p><div class="form-status" id="formStatus" role="status"></div></div></div></form></div></section>
@@ -451,4 +507,21 @@ document.addEventListener('DOMContentLoaded',()=>{
   panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.setAttribute('aria-expanded','false');panel.classList.remove('is-open');});});
 })();
 </script>
+
+<script>
+(function(){
+  const toggle=document.querySelector('.mobile-menu-toggle');
+  const menu=document.getElementById('mobile-navigation');
+  const header=document.querySelector('header');
+  if(!toggle||!menu||!header) return;
+  const positionMenu=()=>menu.style.setProperty('--mobile-menu-top',header.getBoundingClientRect().bottom+'px');
+  const closeMenu=()=>{toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Open navigation menu');menu.classList.remove('open');menu.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open');};
+  toggle.addEventListener('click',()=>{positionMenu();const open=toggle.getAttribute('aria-expanded')==='true';if(open){closeMenu();}else{toggle.setAttribute('aria-expanded','true');toggle.setAttribute('aria-label','Close navigation menu');menu.classList.add('open');menu.setAttribute('aria-hidden','false');document.body.classList.add('menu-open');}});
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  window.addEventListener('resize',()=>{positionMenu();if(window.innerWidth>900) closeMenu();});
+  window.addEventListener('scroll',positionMenu,{passive:true});
+  positionMenu();
+})();
+</script>
+
 </body></html>
