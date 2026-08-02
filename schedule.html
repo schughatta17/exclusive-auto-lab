@@ -324,7 +324,7 @@ footer .flinks a:hover{color:var(--accent)}
 <svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="5" stroke="currentColor" stroke-width="1.8" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4.25" stroke="currentColor" stroke-width="1.8"></circle><circle cx="17.4" cy="6.7" fill="currentColor" r="1.1"></circle></svg>
 </a>
 <a class="navcta" href="tel:+12033087381">Call the Shop</a>
-</nav><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false"><span></span><span></span><span></span></button><button class="mobile-nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNavPanel"><span></span></button></div><div class="mobile-nav-panel" id="mobileNavPanel"><a href="index.html">Home</a><a href="collision-repair.html">Collision Repair</a><a href="insurance-claims.html">Insurance Claims</a><a href="paint-protection-film.html">Paint Protection Film</a><a href="ceramic-coating.html">Ceramic Coating</a><a href="vehicle-tint.html">Vehicle Tint</a><a href="vinyl-wraps.html">Vinyl Wraps</a><a href="schedule.html">Schedule</a><a href="contact.html">Contact</a><a href="tel:+12033087381">Call 203-308-7381</a></div></header><div class="mobile-menu" id="mobile-navigation" aria-hidden="true">
+</nav><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="mobile-navigation" aria-expanded="false"><span></span><span></span><span></span></button></div></header><div class="mobile-menu" id="mobile-navigation" aria-hidden="true">
 <div class="mobile-menu-inner">
 <a href="index.html">Home</a>
 <details><summary>Collision Repair</summary><div class="mobile-submenu">
@@ -493,20 +493,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  });
 });
 </script>
-<script>
-(function(){
-  var btn=document.querySelector('.mobile-nav-toggle');
-  var panel=document.getElementById('mobileNavPanel');
-  if(!btn||!panel)return;
-  btn.addEventListener('click',function(){
-    var open=btn.getAttribute('aria-expanded')==='true';
-    btn.setAttribute('aria-expanded',String(!open));
-    btn.setAttribute('aria-label',open?'Open navigation':'Close navigation');
-    panel.classList.toggle('is-open',!open);
-  });
-  panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){btn.setAttribute('aria-expanded','false');panel.classList.remove('is-open');});});
-})();
-</script>
+
 
 <script>
 (function(){
