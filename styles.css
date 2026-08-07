@@ -808,3 +808,21 @@ footer h4+p{margin-bottom:26px}
   transition:color .25s,border-color .25s;
 }
 .servicecopy .card-link:hover{color:var(--white);border-color:var(--white)}
+
+/* --- clean hero treatment (matches Legends: lighter veil, subject stays visible) --- */
+.hero.clean::before{
+  opacity:.14;
+  mask-image:linear-gradient(90deg,#000 0 36%,transparent 66%);
+  -webkit-mask-image:linear-gradient(90deg,#000 0 36%,transparent 66%);
+}
+.hero.clean::after{
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.74) 42%,rgba(0,0,0,.15) 72%),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.18) 55%,var(--ink) 100%);
+}
+@media(max-width:900px){
+  .hero.clean{background-position:62% center}
+  .hero.clean::before{mask-image:linear-gradient(180deg,#000 0 40%,transparent 82%);-webkit-mask-image:linear-gradient(180deg,#000 0 40%,transparent 82%)}
+  .hero.clean::after{background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,.35) 42%,rgba(0,0,0,.88) 82%,var(--ink) 100%)}
+}
+@media(max-width:560px){ .hero.clean{background-position:63% center} }
