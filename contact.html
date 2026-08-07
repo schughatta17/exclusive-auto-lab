@@ -162,7 +162,7 @@
 </script>
 <script>
 (function(){
-  const fallback='img/undercar-repair.jpg';
+  const fallback='undercar-repair.jpg';
   document.querySelectorAll('.service img,.gallerygrid img').forEach(function(img){
     img.addEventListener('error',function(){
       if(this.dataset.fallbackApplied)return;
