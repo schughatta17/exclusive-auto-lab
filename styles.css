@@ -1153,3 +1153,24 @@ footer h4+p{margin-bottom:26px}
     color:#49647f!important;text-align:center!important;font:700 2.5px/1 Arial,sans-serif!important;letter-spacing:.02em!important;
   }
 }
+
+/* V11.6 — Collision hero mobile image ratio fix.
+   Keep the Porsche hero at its original 852×463 proportions instead of forcing
+   it into a tall mobile box. Desktop styling and customization/G-Wagon are untouched. */
+@media (max-width: 900px){
+  .collision-legacy{
+    min-height:0!important;
+    padding-top:54.342723%!important; /* 463 / 852 */
+    background-size:100% auto!important;
+    background-position:center top!important;
+    background-repeat:no-repeat!important;
+    background-color:#050505!important;
+  }
+}
+@media (max-width: 560px){
+  .collision-legacy{
+    padding-top:54.342723%!important;
+    background-size:100% auto!important;
+    background-position:center top!important;
+  }
+}
