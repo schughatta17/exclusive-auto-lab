@@ -900,3 +900,28 @@ footer h4+p{margin-bottom:26px}
 .custom-feature-copy p{font-size:18px;color:#c7c7c7;margin:0 0 25px}.custom-tags{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:29px}.custom-tags span{border:1px solid #353535;padding:9px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:800}
 @media(max-width:900px){.customization-intro,.custom-feature{grid-template-columns:1fr;gap:36px}.customization-photo{min-height:570px}.customization-services{grid-template-columns:1fr 1fr}.custom-feature-media{min-height:480px}.custom-feature-copy{padding:48px 30px}}
 @media(max-width:560px){.customization-intro{margin-bottom:48px}.customization-copy h2{font-size:46px}.customization-photo{min-height:480px}.customization-services{grid-template-columns:1fr}.custom-card{padding:28px 24px 38px!important;min-height:230px}.custom-feature{margin-top:48px}.custom-feature-media{min-height:390px}.custom-feature-copy{padding:38px 22px}.project-label{left:18px;right:18px}}
+
+
+/* V11 mobile cleanup */
+@media(max-width:560px){
+  .customization-photo{min-height:0!important;max-height:none!important;aspect-ratio:1473/2048!important;background:#050505!important;}
+  .customization-photo img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center center!important;}
+  .customization-photo .project-label{background:linear-gradient(180deg,transparent,rgba(0,0,0,.92));padding-top:80px;}
+}
+
+/* Rebrand the visible Porsche plate on collision hero. */
+.collision-legacy{position:relative;}
+.collision-legacy .collision-plate{
+  position:absolute;z-index:1;left:17.4%;top:50.4%;transform:translate(-50%,-50%) rotate(1.5deg);
+  display:flex;align-items:center;justify-content:center;width:clamp(62px,7.2vw,108px);height:clamp(25px,3.05vw,44px);
+  background:#f0f0ed;color:#090909;border:2px solid #171717;border-radius:2px;
+  font:700 clamp(7px,.72vw,11px)/1 Archivo,Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  box-shadow:0 1px 4px rgba(0,0,0,.55);pointer-events:none;
+}
+.collision-legacy .wrap{position:relative;z-index:2;}
+@media(max-width:760px){
+  .collision-legacy .collision-plate{left:17.5%;top:142px;width:54px;height:22px;font-size:6px;border-width:1px;}
+}
+@media(max-width:420px){
+  .collision-legacy .collision-plate{left:17.5%;top:140px;width:50px;height:20px;font-size:5.5px;}
+}
