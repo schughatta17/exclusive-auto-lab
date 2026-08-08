@@ -925,3 +925,19 @@ footer h4+p{margin-bottom:26px}
 @media(max-width:420px){
   .collision-legacy .collision-plate{left:17.5%;top:140px;width:50px;height:20px;font-size:5.5px;}
 }
+
+/* V11.1 — mobile G-Wagon sizing only. Keep the original G-Wagon image; never stretch it. */
+@media(max-width:900px){
+  .customization-legacy{
+    padding-top:360px!important;
+    background-size:cover!important;
+    background-position:center 62%!important;
+  }
+}
+@media(max-width:560px){
+  .customization-legacy{
+    padding-top:330px!important;
+    background-size:cover!important;
+    background-position:center 61%!important;
+  }
+}
